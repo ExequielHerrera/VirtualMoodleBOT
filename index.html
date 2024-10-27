@@ -24,24 +24,25 @@
             --df-messenger-input-placeholder-font-color: #1a1a1a;
             --df-messenger-minimized-chat-close-icon-color: #ffffff;
         }
-        #chat-button {
-            padding: 10px 20px;
-            background-color: #43CACB;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        #chat-icon {
+            width: 60px; /* Ajusta el tamaño del ícono */
+            height: 60px; /* Ajusta el tamaño del ícono */
             position: fixed;
             bottom: 20px;
             right: 20px;
+            cursor: pointer;
             z-index: 1000;
+        }
+        #chat-container {
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <button id="chat-button">Abrir Chat</button>
-    <div id="chat-container" style="display: none;">
+    <img id="chat-icon" src="https://codexceleste.com/chatbotsOld/core/images/zaroc1.png" alt="Chat Bot Icon" />
+
+    <div id="chat-container">
         <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
         <df-messenger
             chat-icon="https://codexceleste.com/chatbotsOld/core/images/zaroc1.png"
@@ -53,9 +54,9 @@
     </div>
 
     <script>
-        document.getElementById('chat-button').onclick = function() {
+        document.getElementById('chat-icon').onclick = function() {
             document.getElementById('chat-container').style.display = 'block';
-            this.style.display = 'none'; // Oculta el botón después de hacer clic
+            this.style.display = 'none'; // Oculta el ícono después de hacer clic
         };
     </script>
 </body>
