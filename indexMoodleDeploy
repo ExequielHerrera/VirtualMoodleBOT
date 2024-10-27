@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Moodle BOT - Github Deploy</title>
+    <link
+        rel="icon"
+        href="https://codexceleste.com/chatbots/core/images/zaroc1.png"
+        type="image/x-icon"
+    />
+    <style>
+        df-messenger {
+            --df-messenger-bot-message: #43CACB;
+            --df-messenger-user-message: #43CACB;
+            --df-messenger-font-color: #ffffff;
+            --df-messenger-send-icon: #43CACB;
+            --df-messenger-button-titlebar-color: #43CACB;
+            --df-messenger-button-titlebar-font-color: #ffffff;
+            --df-messenger-chat-background-color: #ffffff;
+            --df-messenger-input-box-color: #ffffff;
+            --df-messenger-input-font-color: #000000;
+            --df-messenger-input-placeholder-font-color: #1a1a1a;
+            --df-messenger-minimized-chat-close-icon-color: #ffffff;
+        }
+        #chat-button {
+            padding: 10px 20px;
+            background-color: #43CACB;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="chat-button">Abrir Chat</button>
+    <div id="chat-container" style="display: none;">
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <df-messenger
+            chat-icon="https://codexceleste.com/chatbotsOld/core/images/zaroc1.png"
+            intent="WELCOME"
+            chat-title="Virtual Moodle BOT"
+            agent-id="21505c29-624d-43ac-861a-1c9e8cd1aff5"
+            language-code="en"
+        ></df-messenger>
+    </div>
+
+    <script>
+        document.getElementById('chat-button').onclick = function() {
+            document.getElementById('chat-container').style.display = 'block';
+            this.style.display = 'none'; // Oculta el botón después de hacer clic
+        };
+    </script>
+</body>
+</html>
