@@ -32,6 +32,11 @@
             right: 20px;
             cursor: pointer;
             z-index: 1000;
+            background-color: #43CACB; /* Color de fondo del ícono */
+            border-radius: 50%; /* Hace que el ícono sea redondo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         #chat-container {
             display: none;
@@ -40,7 +45,9 @@
 </head>
 
 <body>
-    <img id="chat-icon" src="https://codexceleste.com/chatbotsOld/core/images/zaroc1.png" alt="Chat Bot Icon" />
+    <div id="chat-icon">
+        <img src="https://codexceleste.com/chatbotsOld/core/images/zaroc1.png" alt="Chat Bot Icon" style="width: 40px; height: 40px;"/>
+    </div>
 
     <div id="chat-container">
         <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
